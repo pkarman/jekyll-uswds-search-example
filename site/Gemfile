@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.1.1"
 
-gem 'uswds-jekyll', :git => 'https://github.com/18F/uswds-jekyll.git'
+gem 'uswds-jekyll', git: 'https://github.com/18F/uswds-jekyll.git', branch: 'update-uswds-2.0'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
