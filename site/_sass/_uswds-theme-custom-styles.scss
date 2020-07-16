@@ -1,0 +1,22 @@
+// override default uswds-jekyll theme styles
+
+// KS colors are not available in USWDS palette so we cannot use _data/theme.yml
+.usa-footer__primary-section,
+.usa-footer__secondary-section,
+.usa-header {
+  background-color: #002569;
+}
+
+.usa-nav {
+  background-color: #fff;
+
+  .usa-nav__submenu {
+    a {
+      color: #002569;
+    }
+  }
+}
+
+.usa-footer__logo-img {
+  max-width: none;
+}

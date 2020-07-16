@@ -1,0 +1,17 @@
+colors:
+  header:
+    header-title: 'gray-1'
+    header-link: 'gray-1'
+  footer:
+    footer-text: 'gray-1'
+    footer-link: 'gray-1'
+    footer-social-link: 'gray-1'
+  top-navigation:
+    top-nav-bg: 'white'
+    top-nav-link: 'base-dark'
+    top-nav-link-hover: 'primary'
+    top-nav-link-hover-bg: 'white'
+    top-nav-link-current: 'base-dark'
+    top-nav-dropdown-bg: 'gray-4'
+    top-nav-dropdown-link: 'base-dark'
+    top-nav-dropdown-link-hover-bg: 'transparent'

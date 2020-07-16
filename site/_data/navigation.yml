@@ -12,4 +12,6 @@ primary:
   # collapsible link lists. The 'links' field can either be a
   # reference to another link list in this file, or a literal list.
   - text: Section title
-    links: <links>
+    links:
+      - text: Foo
+        href: /bar/
