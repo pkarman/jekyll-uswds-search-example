@@ -34,6 +34,12 @@ theme: uswds-jekyll
 plugins:
   - jekyll-feed
 
+# collections are .md files that have common metadata and are grouped
+# together and available via the build system as "site.<collectionname>"
+collections:
+  softwares:
+    output: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
