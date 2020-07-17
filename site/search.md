@@ -13,7 +13,7 @@ layout: page
 
 <div id="search-results" class="margin-top-2"></div>
 
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/assets/js/lunr.min.js"></script>
 <script src="/systems.js"></script>
 <script>
   let systemDocs = {}; // easy lookup
@@ -40,10 +40,25 @@ layout: page
       return false;
     }
 
-    let results = invIndex.search(query);
     clearResults();
-    renderResults(results);
+
+    try {
+      let results = invIndex.search(query);
+      renderResults(results);
+    } catch (error) {
+      displayError(error);
+    }
     return false;
+  }
+
+  let displayError = function(error) {
+    let errMsg = '<div class="usa-alert usa-alert--error">' + 
+                   '<div class="usa-alert__body">' +
+                     '<h3 class="usa-alert__heading">Error</h3>' + 
+                     '<p class="usa-alert__text">' + error + '</div>' +
+                   '</div>' +
+                 '</div>';
+    $('#search-results').append(errMsg);
   }
 
   let renderResults = function(results) {
