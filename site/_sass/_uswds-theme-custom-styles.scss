@@ -20,3 +20,10 @@
 .usa-footer__logo-img {
   max-width: none;
 }
+
+// header logo
+.usa-header.usa-header--extended {
+  .usa-logo-img {
+    height: 4rem;
+  }
+}

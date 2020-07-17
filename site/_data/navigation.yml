@@ -4,9 +4,8 @@ primary:
     href: /docs/
   - text: Support
     href: /help/
-  - text: External link
-    href: https://18f.gsa.gov
-    external: true
+  - text: Search
+    href: /search/
 
   # link objects with a 'links' field will be presented as
   # collapsible link lists. The 'links' field can either be a

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kansas OITS Inventory
+title: OITS Inventory
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -37,8 +37,15 @@ plugins:
 # collections are .md files that have common metadata and are grouped
 # together and available via the build system as "site.<collectionname>"
 collections:
-  softwares:
+  systems:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "systems"
+    values:
+      layout: "system"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
