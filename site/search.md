@@ -13,16 +13,22 @@ layout: page
 
 <div id="search-results" class="margin-top-2"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/minisearch@2.4.1/dist/umd/index.min.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="/systems.js"></script>
 <script>
-  let miniSearch = new MiniSearch({
-    fields: ['title', 'text'], // fields to index for full-text search
-    storeFields: ['title', 'category'] // fields to return with search results
-  });
+  let systemDocs = {}; // easy lookup
 
-  // Index all documents
-  miniSearch.addAll(SYSTEMS);
+  let invIndex = lunr(function () {
+    this.ref('id')
+    this.field('content')
+    this.field('title')
+    this.field('agency')
+
+    SYSTEMS.forEach(function (doc) {
+      this.add(doc);
+      systemDocs[doc.id] = doc;
+    }, this)
+  });
 
   let clearResults = function() {
     $('#search-results').empty();
@@ -34,7 +40,7 @@ layout: page
       return false;
     }
 
-    let results = miniSearch.search(query);
+    let results = invIndex.search(query);
     clearResults();
     renderResults(results);
     return false;
@@ -42,13 +48,18 @@ layout: page
 
   let renderResults = function(results) {
     console.log(results);
+    if (results.length === 0) {
+      $('#search-results').append('<div>No results</div>');
+      return;
+    }
     results.forEach(function(result, idx, all_results) {
       renderResult(result, idx);
     });
   }
 
   let renderResult = function(result, idx) {
-    $('#search-results').append('<div class="result"><a href="' + result.id + '">' + result.title + '</a></div>');
+    let system = systemDocs[result.ref];
+    $('#search-results').append('<div class="result"><a href="' + system.id + '">' + system.title + '</a></div>');
   }
 
   // listen for interaction on the search field
