@@ -14,7 +14,7 @@ layout: page
 <div id="search-results" class="margin-top-2"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/minisearch@2.4.1/dist/umd/index.min.js"></script>
-<script src="/softwares.js"></script>
+<script src="/systems.js"></script>
 <script>
   let miniSearch = new MiniSearch({
     fields: ['title', 'text'], // fields to index for full-text search
@@ -22,7 +22,7 @@ layout: page
   });
 
   // Index all documents
-  miniSearch.addAll(SOFTWARES);
+  miniSearch.addAll(SYSTEMS);
 
   let clearResults = function() {
     $('#search-results').empty();
