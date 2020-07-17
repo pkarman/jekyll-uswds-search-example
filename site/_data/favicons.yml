@@ -1,0 +1,21 @@
+- rel: shortcut icon
+  type: image/ico
+  href: /assets/img/favicon.ico
+- rel: icon
+  type: image/png
+  href: /assets/img/favicon.png
+- rel: icon
+  type: image/png
+  sizes: 192x192
+  href: /assets/img/favicon-192.png
+- rel: apple-touch-icon-precomposed
+  href: /assets/img/favicon-57.png
+- rel: apple-touch-icon-precomposed
+  sizes: 72x72
+  href: /assets/img/favicon-72.png
+- rel: apple-touch-icon-precomposed
+  sizes: 114x114
+  href: /assets/img/favicon-114.png
+- rel: apple-touch-icon-precomposed
+  sizes: 144x144
+  href: /assets/img/favicon-144.png
