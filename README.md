@@ -1,5 +1,5 @@
 ```
-% bundle
+% make deps
 % make run
 ```
 
