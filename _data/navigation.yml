@@ -1,11 +1,11 @@
 # _data/navigation.yml
 primary:
   - text: Documentation
-    href: /docs/
+    href: /docs
   - text: Support
-    href: /help/
+    href: /help
   - text: Search
-    href: /search/
+    href: /search
 
   # link objects with a 'links' field will be presented as
   # collapsible link lists. The 'links' field can either be a
@@ -13,4 +13,4 @@ primary:
   - text: Section title
     links:
       - text: Foo
-        href: /bar/
+        href: /bar
